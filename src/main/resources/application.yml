@@ -1,0 +1,10 @@
+server:
+    port: ${port:8080}
+spring:
+    profiles:
+        active: dev
+    application:
+        name: product-service
+    config:
+        fail-fast: true
+        import: configserver:http://localhost:8888/

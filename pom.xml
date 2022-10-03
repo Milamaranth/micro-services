@@ -44,6 +44,16 @@
 			<version>2.7.18</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -54,7 +64,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 	<dependencyManagement>
 		<dependencies>

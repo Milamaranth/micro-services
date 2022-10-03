@@ -1,4 +1,4 @@
-package com.nttdata.bootcamp;
+package com.nttdata.bootcamp.productservice;
  
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -13,3 +13,4 @@ public class RestConfiguracion {
     RestTemplate loadBalancedRestTemplate() {
         return new RestTemplate();
     }
+}

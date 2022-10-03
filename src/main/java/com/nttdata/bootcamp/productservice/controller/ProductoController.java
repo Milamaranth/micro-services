@@ -1,19 +1,22 @@
 package com.nttdata.bootcamp.productservice.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nttdata.bootcamp.productservice.services.Product;
+import com.nttdata.bootcamp.productservice.dto.Product;
+import com.nttdata.bootcamp.productservice.services.ProductoServiceI;
 
 @RestController
-public interface ProductoController {
+public class ProductoController {
 
+    @Autowired
+    private ProductoServiceI productService;
 
-    public Product getProduct(){
-        Product producto = new Product();
-        product.setProductId();
-        product.setChannel();
-        return product;
+    @GetMapping("/{id}")
+    public Product getProduct(@PathVariable Integer id) {
+        return productService.getProduct(id);
     }
-    
 
 }
